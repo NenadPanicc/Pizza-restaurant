@@ -23,10 +23,32 @@ main {
     height:900px;
     max-width:1920px;
     margin:auto;
-    background-repeat: no-repeat;
-    background-position: 0 900px;
+    background:transparent;
 }
+#main {
+    z-index: -2;
+    position: absolute;
+}
+#main-img {
+    z-index: -1;
+    position: absolute;
+    top:900px;
+    
+}
+#order-btn {
+    background-color: darkred;
+    border-color: darkred;
+    outline-color: darkred;
+    position:absolute;
+    top:500px;
+    left:44%;
+    opacity:0;
 
+}
+#order-btn:hover {
+    background-color: darkgreen;
+    border-color: darkgreen;
+}
 #intro-text {
     position:relative;
     top:300px;
@@ -117,6 +139,8 @@ h1 {
 /*SECOND CONTAINER*/
 #secondContainer {
     margin-top:20px;
+    max-width:100%;
+    background-color: white;
 }
 #pizza-box{
     position:relative;
@@ -425,4 +449,13 @@ h4 {
 @keyframes fadeIn {
     0% {opacity:0}
     100% {opacity:1}
+}
+.fadeOut {
+    animation-name:fadeOut;
+    animation-duration: 1.5s;
+    animation-fill-mode:forwards;
+}
+@keyframes fadeOut {
+    0% {opacity:1}
+    100% {opacity:0}
 }

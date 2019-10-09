@@ -1,8 +1,11 @@
 //V A R I A B L E S  &  P R O P E R T I E S
 
 // MAIN PIZZA SLIDER IMAGES
-var mainImg =  document.getElementById('main-img')
+var mainContainer = document.querySelector(".main")
+var main =  document.getElementById('main')
+var mainImg = document.getElementById("main-img")
 var introText = document.getElementById("intro-text")
+var orderBtn = document.getElementById("order-btn")
 var img1 = document.querySelector(".img1")
 var img2 = document.querySelector(".img2")
 var img3 = document.querySelector(".img3")
@@ -52,110 +55,54 @@ imgFood7.style.left = '-500px';
 imgFood8.style.left = '-750px';
 
 //MAIN CONTENT T R A N S I T I O N   A N I M A T I O N
-mainImg.style.transitionDuration="0.5s";
+main.style.transitionDuration = "2s";
+mainImg.style.transitionDuration="3.5s";
 
 // MAIN PIZZA SLIDER FUNCTION
 
-/*function changeImg() {
- setTimeout(() => {
-    mainImg.style.backgroundImage="url('pizza1.jpg')"   
- },1000)
- setTimeout(() => {    
-    mainImg.style.backgroundImage="url('pizza2.jpg')"   
-},6000)
-setTimeout(() => {  
-    mainImg.style.backgroundImage="url('pizza3.jpg')"   
-},11000)
-}
-*/
+
 function changeImg() {
-  // FIRST SET
-  setTimeout(() => {
-    mainImg.style.backgroundImage = "url(pizza1-dark.jpg)"
-    mainImg.style.backgroundPositionY = "0px"
-    setTimeout(() => {
-      introText.classList.add("fadeIn")
-      mainImg.style.backgroundPositionY ="-1100px"
-    },700)
-    setTimeout(() => {
-      
-      mainImg.style.transitionDuration = "0s"
-      mainImg.style.backgroundPositionY ="900px"  
-    },1300)
-    setTimeout(() => {
-      mainImg.style.backgroundColor = "#333" 
-      mainImg.style.transitionDuration = "0.3s"
-      mainImg.style.backgroundImage = "url(pizza1.jpg)"
-      mainImg.style.backgroundPositionY ="0px" 
-    },1310)
-    setTimeout(() => { 
-      mainImg.style.transitionDuration = "0.3s"
-      mainImg.style.backgroundPositionY ="-1100px" 
-    },4700)
- },5000)
+  // PICTURE WITH ZINDEX -2 IS SET TO BE 300 LOWER AND MAIN IMG IS SLIDING UPWARDS
+ main.style.backgroundPositionY = "300px"
+ mainImg.style.top = "-1000px"
+ // FIRST SET
+ // FADING IN TEXT
+ setTimeout(() => {
+  introText.classList.add("fadeIn")
+},300)
+// GETTING THE PICTURE WITH ZINDEX -2 TO ITS POSITIONING AND ADDING IT A SRC IMAGE
+ setTimeout(() => {
+  main.style.backgroundPositionY = "0"
+   changePizza("pizza1.jpg", main)
+ },900)
+ // FADING IN THE ORDER BUTTON
+ setTimeout(() => {
+  orderBtn.classList.add("fadeIn")
+ },1200)
  // SECOND SET
-  
- setTimeout(() => {    
-  mainImg.style.transitionDuration = "0s"
-  mainImg.style.backgroundPositionY ="900px"
-  setTimeout(() => {
-    mainImg.style.transitionDuration = "0.3s"
-    mainImg.style.backgroundImage = "url(pizza2-dark.jpg)"
-    mainImg.style.backgroundPositionY = "0px"
-  },100)
-  setTimeout(() => {
-    introText.classList.add("fadeIn")
-    mainImg.style.backgroundPositionY ="-1100px"
-  },700)
-  setTimeout(() => {
-    
-    mainImg.style.transitionDuration = "0s"
-    mainImg.style.backgroundPositionY ="900px"  
-  },1300)
-  setTimeout(() => {
-    mainImg.style.backgroundColor = "#333" 
-    mainImg.style.transitionDuration = "0.3s"
-    mainImg.style.backgroundImage = "url(pizza2.jpg)"
-    mainImg.style.backgroundPositionY ="0px" 
-  },1310)
-  setTimeout(() => { 
-    mainImg.style.transitionDuration = "0.3s"
-    mainImg.style.backgroundPositionY ="-1100px" 
-  },4700)
-},10000)
-// THIRD SET
-setTimeout(() => {    
-  mainImg.style.transitionDuration = "0s"
-  mainImg.style.backgroundPositionY ="900px"
-  setTimeout(() => {
-    mainImg.style.transitionDuration = "0.3s"
-    mainImg.style.backgroundImage = "url(pizza3-dark.jpg)"
-    mainImg.style.backgroundPositionY = "0px"
-  },100)
-  setTimeout(() => {
-    introText.classList.add("fadeIn")
-    mainImg.style.backgroundPositionY ="-1100px"
-  },700)
-  setTimeout(() => {
-    
-    mainImg.style.transitionDuration = "0s"
-    mainImg.style.backgroundPositionY ="900px"  
-  },1300)
-  setTimeout(() => {
-    mainImg.style.backgroundColor = "#333" 
-    mainImg.style.transitionDuration = "0.3s"
-    mainImg.style.backgroundImage = "url(pizza3.jpg)"
-    mainImg.style.backgroundPositionY ="0px" 
-  },1310)
-  setTimeout(() => { 
-    mainImg.style.transitionDuration = "0.3s"
-    mainImg.style.backgroundPositionY ="-1100px" 
-  },4700)
-},15000)
+ setTimeout(() => {
+   // FADE OUT TEXT FROM BEFORE DISPLAY
+  introText.classList.add("fadeOut")
+  orderBtn.classList.add("fadeOut")
+  introText.classList.remove("fadeIn")
+  orderBtn.classList.remove("fadeIn")
+  // SECOND ANIMATION
+  // SWITCHING PLACES WITH MAIN AND MAIN IMG SO THAT THE ANIMATION CAN BE SEEN
+  main.style.zIndex="-1"
+  mainImg.style.zIndex = "-2"
+  // CHANGING THE SRC IMAGE OF THE MAIN IMG
+  changePizza("pizza2-dark.jpg", mainImg)
+  mainImg.style.transitionDuration ="0s"
+  mainImg.style.top = "0px"
+  main.style.backgroundPositionY = "-1100px"
+  main.style.opacity= "0"
+
+ },6000)
 }
+
 // CHANGE PIZZA IMAGE ON CLICK
-function changePizza(url) {
-    mainImg.style.backgroundImage="url("+url+")"
+function changePizza(url, container) {
+  container.style.backgroundImage="url("+url+")"
 }
 
 //MENU IMAGE SLIDER FUNCTION
@@ -239,6 +186,8 @@ function scrollFunction() {
 
 // C A L L I N G   F U N C T I O N S
 
+//CALLING THE changeImg FUNCTION AS SOON AS THE WINDOW LOADS
+window.onload = changeImg;
 // CALLING THE changeImg FUNCTION EVERY 10s
 setInterval(changeImg, 15000)
 
