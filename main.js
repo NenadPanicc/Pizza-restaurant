@@ -2,8 +2,8 @@
 
 // MAIN PIZZA SLIDER IMAGES
 var mainContainer = document.querySelector(".main")
-var main =  document.getElementById('main')
-var mainImg = document.getElementById("main-img")
+var underLayer =  document.getElementById('main')
+var aboveLayer = document.getElementById("main-img")
 var introText = document.getElementById("intro-text")
 var orderBtn = document.getElementById("order-btn")
 var img1 = document.querySelector(".img1")
@@ -55,16 +55,20 @@ imgFood7.style.left = '-500px';
 imgFood8.style.left = '-750px';
 
 //MAIN CONTENT T R A N S I T I O N   A N I M A T I O N
-main.style.transitionDuration = "2s";
-mainImg.style.transitionDuration="3.5s";
+underLayer.style.transitionDuration = "1.3s";
+aboveLayer.style.transitionDuration="3.5s";
 
 // MAIN PIZZA SLIDER FUNCTION
-
+// INITIALIZING THE PICTURE FOR MAIN IMG
+changePizza("pizza1-dark.jpg", aboveLayer)
 
 function changeImg() {
+  //INITIALIZE LAYERS
+  underLayer.style.zIndex="-2"
+  aboveLayer.style.zIndex = "-1"
   // PICTURE WITH ZINDEX -2 IS SET TO BE 300 LOWER AND MAIN IMG IS SLIDING UPWARDS
- main.style.backgroundPositionY = "300px"
- mainImg.style.top = "-1000px"
+ underLayer.style.top = "300px"
+ aboveLayer.style.top = "-1000px"
  // FIRST SET
  // FADING IN TEXT
  setTimeout(() => {
@@ -72,9 +76,9 @@ function changeImg() {
 },300)
 // GETTING THE PICTURE WITH ZINDEX -2 TO ITS POSITIONING AND ADDING IT A SRC IMAGE
  setTimeout(() => {
-  main.style.backgroundPositionY = "0"
-   changePizza("pizza1.jpg", main)
- },900)
+  underLayer.style.top = "0"
+   changePizza("pizza1.jpg", underLayer)
+ },800)
  // FADING IN THE ORDER BUTTON
  setTimeout(() => {
   orderBtn.classList.add("fadeIn")
@@ -88,16 +92,102 @@ function changeImg() {
   orderBtn.classList.remove("fadeIn")
   // SECOND ANIMATION
   // SWITCHING PLACES WITH MAIN AND MAIN IMG SO THAT THE ANIMATION CAN BE SEEN
-  main.style.zIndex="-1"
-  mainImg.style.zIndex = "-2"
-  // CHANGING THE SRC IMAGE OF THE MAIN IMG
-  changePizza("pizza2-dark.jpg", mainImg)
-  mainImg.style.transitionDuration ="0s"
-  mainImg.style.top = "0px"
-  main.style.backgroundPositionY = "-1100px"
-  main.style.opacity= "0"
 
- },6000)
+  changePizza("pizza2-dark.jpg", underLayer)
+  changePizza("pizza1.jpg", aboveLayer)
+  // GETTING THE MAIN IMG BACK INTO POSITION
+  aboveLayer.style.transitionDuration ="0s"
+  aboveLayer.style.top = "0px"
+  // SWIPING THE MAIN UP UNCOVERING THE MAIN IMG
+  underLayer.style.top = "-900px"
+  setTimeout(() => {
+    introText.innerText = `Dom Chicago testa`
+    introText.style.right="200px"
+    introText.style.bottom="300px"
+    introText.classList.remove("fadeOut")
+    introText.classList.add("fadeIn")
+    aboveLayer.style.transitionDuration ="1.5s"
+    aboveLayer.style.top = "-900px"
+  },500)
+  setTimeout(() => {
+    underLayer.style.zIndex="-2"
+    aboveLayer.style.zIndex = "-1"
+    underLayer.style.transitionDuration = "0s"
+    underLayer.style.top = "0"
+  },300) 
+  setTimeout(() => {
+    aboveLayer.style.transitionDuration = "0s"
+    aboveLayer.style.top = "0"
+  },300) 
+  setTimeout(() => {
+    underLayer.style.transitionDuration = "1s"
+    underLayer.style.top = "-900px"
+  },1000) 
+  setTimeout(() => {
+    underLayer.style.zIndex="-1"
+    aboveLayer.style.zIndex = "-2"
+    changePizza("pizza2.jpg", aboveLayer)
+    aboveLayer.style.transitionDuration = "0s"
+    aboveLayer.style.top = "300px"
+  },1000) 
+  setTimeout(() => { 
+    aboveLayer.style.transitionDuration = "0.7s"
+    aboveLayer.style.top = "0"
+  },1100) 
+ setTimeout(() => {
+
+  
+ },7700)
+ },8000)
+ setTimeout(() => {
+ // THIRD ANIMATION
+ introText.classList.add("fadeOut")
+  introText.classList.remove("fadeIn")
+ changePizza("pizza3-dark.jpg", underLayer)
+ changePizza("pizza2.jpg", aboveLayer)
+ // GETTING THE MAIN IMG BACK INTO POSITION
+ aboveLayer.style.transitionDuration ="0s"
+ aboveLayer.style.top = "0px"
+ // SWIPING THE MAIN UP UNCOVERING THE MAIN IMG
+ underLayer.style.top = "-900px"
+ setTimeout(() => {
+  introText.style.right="0"
+  introText.style.bottom="0"
+   introText.classList.remove("fadeOut")
+   introText.innerText = "Your Happy Place"
+   introText.classList.add("fadeIn")
+   orderBtn.classList.remove("fadeOut")
+   orderBtn.classList.add("fadeIn")
+   aboveLayer.style.transitionDuration ="1.5s"
+   aboveLayer.style.top = "-900px"
+ },500)
+ setTimeout(() => {
+   underLayer.style.zIndex="-2"
+   aboveLayer.style.zIndex = "-1"
+   underLayer.style.transitionDuration = "0s"
+   underLayer.style.top = "0"
+ },300) 
+ setTimeout(() => {
+   aboveLayer.style.transitionDuration = "0s"
+   aboveLayer.style.top = "0"
+ },300) 
+ setTimeout(() => {
+   underLayer.style.transitionDuration = "1s"
+   underLayer.style.top = "-900px"
+ },1000) 
+ setTimeout(() => {
+   underLayer.style.zIndex="-1"
+   aboveLayer.style.zIndex = "-2"
+   changePizza("pizza3.jpg", aboveLayer)
+   aboveLayer.style.transitionDuration = "0s"
+   aboveLayer.style.top = "300px"
+ },1000) 
+ setTimeout(() => {
+   aboveLayer.style.transitionDuration = "0.7s"
+   aboveLayer.style.top = "0"
+ },1100) 
+
+},14000)
 }
 
 // CHANGE PIZZA IMAGE ON CLICK
@@ -189,7 +279,7 @@ function scrollFunction() {
 //CALLING THE changeImg FUNCTION AS SOON AS THE WINDOW LOADS
 window.onload = changeImg;
 // CALLING THE changeImg FUNCTION EVERY 10s
-setInterval(changeImg, 15000)
+//setInterval(changeImg, 20000)
 
 // EVENT LISTENERS FOR PIZZA IMAGE CHANGE
 img1.addEventListener("click", () => {
