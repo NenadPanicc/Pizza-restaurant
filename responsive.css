@@ -1,0 +1,243 @@
+@media (max-height : 900px) {
+    #main, #main-img {
+        height:140%
+    }
+}
+
+@media (max-width : 600px){
+    #main, #main-img {
+        width:120%;
+    }
+    #intro-text {
+        position: absolute;
+        bottom:50px;
+        left:70px;
+        font-size: 40px;
+        
+    }
+    #order-btn {
+        position: absolute;
+        left:140px;
+        transform: scale(1.4);
+    }
+    #pizzapic, #pizza-girl, #food-row, #sixthContainer, #seventhContainer {
+        display:none;
+    }
+    #firstContainer, #thirdContainer, #fourthContainer {
+        margin-left:26px;
+    }
+    #nbg-pizza, #vracar-pizza, #pizza-box {
+        transform: scale(0.8);
+    }
+    #box-uputstvo, iframe, #italian-style, #chicago-style {
+        transform: scale(0.7);
+    }
+    h2, h3,h4 #box-description, p {
+        margin-left:35px;
+    }
+    #jelovnik-btn {
+        position:absolute;
+        left:50px;
+        top:490%;
+    }
+    #iframe {
+        position: absolute;
+        width:130%;
+        top:510%;
+        left:-30px
+    }
+    #fifthContainer {
+        height:1200px;
+    }
+    #italian-style, #chicago-style {
+        position:relative;
+        right:15%;
+    }
+    @keyframes fadeRight {
+        0% {left:400px;opacity:0;}
+        100% {left:-70px;opacity:1}
+    }
+    @keyframes fadeLeft {
+        0% {right:400px;opacity:0}
+        100% {right:60px;opacity:1}
+    }
+}
+/*MAX WIDTH 1000px*/
+@media (max-width: 1000px) {
+    #main, #main-img {
+        position:absolute;
+        top:-300px;
+        height:150%;
+    }
+    #navbar {
+        position: absolute;
+        top:-110px
+    }
+    #intro-text {
+        font-size:90px;
+        left:180px;
+    }
+    #order-btn {
+        top:650px;
+        left:300px;
+        transform: scale(1.2);
+    }
+    #pizza-thumbnail {
+        position: absolute;
+        top:800px;
+        left:-100px;
+    }
+    #nbg-pizza, #vracar-pizza, #pizza-box, #box-uputstvo, #italian-style, #chicago-style, .column, .nbg, .vracar {
+        transform: scale(0.7);
+    }
+    #first-row{
+        margin-right:150px;
+    }
+    #button1 {
+        top:2340px;
+        left:20px;
+    }
+    #jelovnik-btn {
+        position: absolute;
+        top:2550px;
+        left:340px;
+    }
+    #iframe {
+        position: relative;
+        left:45px;
+    }
+    .vracar {
+        position: absolute;
+        left:150px;
+    }
+    #food-row {
+        max-width: 80%;;
+    }
+    #get-up-btn {
+        top:91%;
+    }
+}
+/*MAX WIDTH 1200px*/
+@media (max-width: 1200px) {
+    #main, #main-img {
+        position:absolute;
+        top:-300px;
+        height:150%;
+    }
+    #navbar {
+        position: relative;
+        bottom:70px
+    }
+    #intro-text {
+        font-size:90px;
+        left:180px;
+    }
+    #order-btn {
+        top:650px;
+        left:510px;
+        transform: scale(1.4);
+    }
+    #pizza-thumbnail {
+        position: absolute;
+        top:800px;
+        left:-65px;
+    }
+    #nbg-pizza, #vracar-pizza, #pizza-box, #box-uputstvo, #italian-style, #chicago-style, .column, .nbg, .vracar {
+        transform: scale(0.9);
+    }
+    #first-row{
+        margin-right:70px;
+    }
+    #button1 {
+        top:2320px;
+        left:20px;
+    }
+    #jelovnik-btn {
+        position: absolute;
+        top:2550px;
+        left:430px;
+    }
+    #iframe {
+        position: relative;
+        left:125px;
+    }
+    .vracar {
+        position: absolute;
+        left:150px;
+    }
+    #food-row {
+        max-width: 80%;;
+    }
+    #get-up-btn {
+        top:91%;
+    }
+}
+/*MAX WIDTH 1300px*/
+@media (max-width: 1300px) {
+    #main, #main-img {
+        position:absolute;
+        top:-300px;
+        height:150%;
+    }
+    #navbar {
+        position: relative;
+        bottom:70px
+    }
+    #intro-text {
+        font-size:90px;
+        left:180px;
+    }
+    #order-btn {
+        top:650px;
+        left:510px;
+        transform: scale(1.4);
+    }
+    #pizza-thumbnail {
+        position: absolute;
+        top:800px;
+        left:-65px;
+    }
+    #nbg-pizza, #vracar-pizza, #pizza-box, #box-uputstvo, #italian-style, #chicago-style, .column, .nbg, .vracar {
+        transform: scale(0.9);
+    }
+    #first-row{
+        margin-right:70px;
+    }
+    #button1 {
+        top:2320px;
+        left:20px;
+    }
+    #jelovnik-btn {
+        position: absolute;
+        top:2550px;
+        left:430px;
+    }
+    #iframe {
+        position: relative;
+        left:155px;
+    }
+    .vracar {
+        position: absolute;
+        left:150px;
+    }
+    #food-row {
+        max-width: 80%;;
+    }
+    #get-up-btn {
+        top:91%;
+    }
+}
+@media (max-width: 1400px) {
+    #pizza-thumbnail {
+        position: absolute;
+        top:800px;
+        left:-40px;
+    }
+    #button1 {
+        top:2120px;
+        left:20px;
+    }
+    #get-up-btn {
+        top:91%;
+    }
+}

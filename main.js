@@ -68,7 +68,7 @@ function changeImg() {
   aboveLayer.style.zIndex = "-1"
   // PICTURE WITH ZINDEX -2 IS SET TO BE 300 LOWER AND MAIN IMG IS SLIDING UPWARDS
  underLayer.style.top = "300px"
- aboveLayer.style.top = "-1000px"
+ aboveLayer.style.top = "-1440px"
  // FIRST SET
  // FADING IN TEXT
  setTimeout(() => {
@@ -99,7 +99,7 @@ function changeImg() {
   aboveLayer.style.transitionDuration ="0s"
   aboveLayer.style.top = "0px"
   // SWIPING THE MAIN UP UNCOVERING THE MAIN IMG
-  underLayer.style.top = "-900px"
+  underLayer.style.top = "-1500px"
   setTimeout(() => {
     introText.innerText = `Dom Chicago testa`
     introText.style.right="200px"
@@ -107,7 +107,7 @@ function changeImg() {
     introText.classList.remove("fadeOut")
     introText.classList.add("fadeIn")
     aboveLayer.style.transitionDuration ="1.5s"
-    aboveLayer.style.top = "-900px"
+    aboveLayer.style.top = "-1500px"
   },500)
   setTimeout(() => {
     underLayer.style.zIndex="-2"
@@ -121,7 +121,7 @@ function changeImg() {
   },300) 
   setTimeout(() => {
     underLayer.style.transitionDuration = "1s"
-    underLayer.style.top = "-900px"
+    underLayer.style.top = "-1500px"
   },1000) 
   setTimeout(() => {
     underLayer.style.zIndex="-1"
@@ -149,7 +149,7 @@ function changeImg() {
  aboveLayer.style.transitionDuration ="0s"
  aboveLayer.style.top = "0px"
  // SWIPING THE MAIN UP UNCOVERING THE MAIN IMG
- underLayer.style.top = "-900px"
+ underLayer.style.top = "-1500px"
  setTimeout(() => {
   introText.style.right="0"
   introText.style.bottom="0"
@@ -159,7 +159,7 @@ function changeImg() {
    orderBtn.classList.remove("fadeOut")
    orderBtn.classList.add("fadeIn")
    aboveLayer.style.transitionDuration ="1.5s"
-   aboveLayer.style.top = "-900px"
+   aboveLayer.style.top = "-1500px"
  },500)
  setTimeout(() => {
    underLayer.style.zIndex="-2"
@@ -173,7 +173,7 @@ function changeImg() {
  },300) 
  setTimeout(() => {
    underLayer.style.transitionDuration = "1s"
-   underLayer.style.top = "-900px"
+   underLayer.style.top = "-1500px"
  },1000) 
  setTimeout(() => {
    underLayer.style.zIndex="-1"
@@ -278,24 +278,23 @@ function scrollFunction() {
 
 //CALLING THE changeImg FUNCTION AS SOON AS THE WINDOW LOADS
 window.onload = changeImg;
-// CALLING THE changeImg FUNCTION EVERY 10s
-//setInterval(changeImg, 20000)
+
 
 // EVENT LISTENERS FOR PIZZA IMAGE CHANGE
 img1.addEventListener("click", () => {
-  changePizza("pizza1.jpg")
+  changePizza("pizza1.jpg", aboveLayer)
   img1.style="opacity:1"
   img2.style="opacity:0.5"
   img3.style="opacity:0.5"
 })
 img2.addEventListener("click", () => {
-  changePizza("pizza2.jpg")
+  changePizza("pizza2.jpg", aboveLayer)
   img1.style="opacity:0.5"
   img2.style="opacity:1"
   img3.style="opacity:0.5"
 })
 img3.addEventListener("click", () => {
-  changePizza("pizza3.jpg")
+  changePizza("pizza3.jpg", aboveLayer)
   img1.style="opacity:0.5"
   img2.style="opacity:0.5"
   img3.style="opacity:1"
