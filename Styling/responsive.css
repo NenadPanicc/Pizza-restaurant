@@ -1,0 +1,265 @@
+@media (max-height : 900px) {
+    #underLayer, #aboveLayer {
+        height:140%
+    }
+}
+
+/*OD 1090 DO 630*/
+@media screen 
+  and (min-width: 400px) 
+  and (max-width: 700px)  { 
+    #underLayer, #aboveLayer {
+        width:120%;
+    }
+    #intro-text {
+        position: absolute;
+        bottom:50px;
+        left:120px;
+        font-size: 40px;  
+    }
+    #order-btn {
+        position: absolute;
+        left:240px;
+        transform: scale(1.4);
+    }
+    #first-row {
+        margin-left:130px;
+    }
+    #pizzapic, #pizza-girl, #food-row, #sixthContainer, #seventhContainer, #pizza-box, #iframe, #thirdContainer {
+        display:none;
+    }
+    #nbg-pizza, #vracar-pizza {
+        transform: scale(0.8);
+    }
+    #box-uputstvo, iframe, #italian-style, #chicago-style {
+        transform: scale(0.7);
+    }
+    h2, h3,h4 #box-description, p {
+        margin-left:35px;
+    }
+    #jelovnik-btn {
+        position:absolute;
+        left:50px;
+        top:490%;
+    }
+    #fifthContainer {
+        height:1200px;
+    }
+    #italian-style, #chicago-style {
+        position:relative;
+        right:15%;
+    }
+    @keyframes fadeRight {
+        0% {left:400px;opacity:0;}
+        100% {left:-70px;opacity:1}
+    }
+    @keyframes fadeLeft {
+        0% {right:400px;opacity:0}
+        100% {right:60px;opacity:1}
+    }
+}
+/*MAX_WIDTH - 100 je aktuelna sirina na kojoj kod radi*/
+@media screen 
+  and (min-width: 700px) 
+  and (max-width: 1100px)  {
+    #underLayer, #aboveLayer {
+        position:absolute;
+        top:-300px;
+        height:200%;
+    }
+    #navbar {
+        position: absolute;
+        top:-110px
+    }
+    #intro-text {
+        font-size:90px;
+        left:180px;
+    }
+    #order-btn {
+        position: absolute;
+        top:650px;
+        left:410px;
+        transform: scale(1.2);
+    }
+    #pizza-thumbnail {
+        position: absolute;
+        top:800px;
+        left:-100px;
+    }
+    #nbg-pizza, #vracar-pizza, #pizza-box, #box-uputstvo, #italian-style, #chicago-style, .column, .nbg, .vracar {
+        transform: scale(0.7);
+    }
+    #first-row{
+        margin-right:150px;
+    }
+    #button1 {
+        top:2230px;
+        left:20px;
+    }
+    #jelovnik-btn {
+        position: absolute;
+        top:2430px;
+        left:340px;
+    }
+    #iframe {
+        position: relative;
+        left:75px;
+    }
+    .vracar {
+        position: absolute;
+        left:150px;
+    }
+    #food-row {
+        max-width: 80%;;
+    }
+    #get-up-btn {
+        top:91%;
+    }
+}
+/*ZAPRAVO JE MAX WIDTH 1430*/
+@media screen 
+  and (min-width: 1100px) 
+  and (max-width: 1700px) {
+    #underLayer, #aboveLayer {
+        position:absolute;
+        top:-300px;
+        height:200%;
+    }
+    #navbar {
+        position: absolute;
+        left:40px;
+    }
+    #intro-text {
+        font-size:90px;
+        left:200px;
+    }
+    #order-btn {
+        position: absolute;
+        top:650px;
+        left:700px;
+        transform: scale(1.4);
+    }
+    #pizza-thumbnail {
+        position: absolute;
+        top:800px;
+        left:55px;
+        transform: scale(1.2);
+    }
+    #first-row{
+        margin-left:50px;
+    }
+    #button1 {
+        top:2225px;
+        left:20px;
+    }
+    #jelovnik-btn {
+        position: absolute;
+        top:2440px;
+        left:40%;
+    }
+    #iframe {
+        position: relative;
+        left:22%;
+    }
+    #thumbnail1{
+        margin-left:120px;
+    }
+    #thumbnail2{
+        margin-left:100px;
+    }
+    #thumbnail3{
+        margin-left:50px;
+    }
+    #thumbnail4{
+        margin-left:50px;
+    }
+    .vracar {
+        position: absolute;
+        left:150px;
+    }
+    #food-row {
+        max-width: 80%;;
+    }
+    .column {
+        transform: scale(1.05);
+    }
+    #get-up-btn {
+        top:91%;
+    }
+}
+/*ZAPRAVO JE MAX WIDTH 1920*/
+@media screen 
+  and (min-width: 1700px) 
+  and (max-width: 2140px) {
+    @keyframes fadeLeft {
+        0% {right:400px;opacity:0}
+        100% {right:-50px;opacity:1}
+    }
+    #underLayer, #aboveLayer {
+        position:absolute;
+        top:-300px;
+        height:200%;
+    }
+    #navbar {
+        position: absolute;
+        left:350px;
+    }
+    #intro-text {
+        font-size:90px;
+        left:100px;
+    }
+    #order-btn {
+        position: absolute;
+        top:650px;
+        left:880px;
+        transform: scale(1.4);
+    }
+    #pizza-thumbnail {
+        position: absolute;
+        top:800px;
+        left:115px;
+        transform: scale(1.2);
+    }
+    #first-row{
+        margin-left:90px;
+    }
+    #button1 {
+        top:2225px;
+        left:20px;
+    }
+    #jelovnik-btn {
+        position: absolute;
+        top:2425px;
+        left:40%;
+    }
+    #iframe {
+        position: relative;
+        left:25%;
+        transform: scale(1.1);
+    }
+    .vracar {
+        position: absolute;
+        left:450px;
+    }
+    #thumbnail1{
+        margin-left:180px;
+    }
+    #thumbnail2{
+        margin-left:100px;
+    }
+    #thumbnail3{
+        margin-left:50px;
+    }
+    #thumbnail4{
+        margin-left:50px;
+    }
+    #food-row {
+        max-width: 80%;
+    }
+    .column {
+        transform: scale(1.05);
+    }
+    #get-up-btn {
+        top:91%;
+    }
+}
