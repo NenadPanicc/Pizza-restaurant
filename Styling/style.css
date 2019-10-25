@@ -33,7 +33,7 @@ main {
     position: absolute;
     top:600px;
 }
-#aboceLayer {
+#aboveLayer {
     z-index: -1;
     position: absolute;
     top:900px;  
@@ -152,6 +152,7 @@ h1 {
 #box-uputstvo {
     position:relative;
     left:650px;
+    opacity:0;
 }
 h2 {
     font-weight: bold;
