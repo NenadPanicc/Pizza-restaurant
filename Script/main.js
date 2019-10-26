@@ -132,7 +132,7 @@ function changeImg() {
     aboveLayer.style.transitionDuration = "0.7s"
     aboveLayer.style.top = "0"
   },1100) 
- },8000)
+ },5500)
  setTimeout(() => {
  // THIRD ANIMATION
  introText.classList.add("fadeOut")
@@ -180,7 +180,7 @@ function changeImg() {
    aboveLayer.style.transitionDuration = "0.7s"
    aboveLayer.style.top = "0"
  },1100) 
-},14000)
+},12000)
 }
 // CHANGE PIZZA IMAGE ON CLICK FUNCTION
 function changePizza(url, container) {
