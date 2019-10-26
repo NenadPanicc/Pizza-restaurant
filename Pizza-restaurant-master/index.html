@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="Styling/style.css" rel="stylesheet">
+    <link href="Styling/animations.css" rel="stylesheet">
+    <title>Pizza Place</title>
+</head>
+<body>
+  
+    <!--NAVBAR-->
+              <!--PIZZA MAIN SLIDESHOW-->
+              <main role="main" class="inner cover main" >
+                <img id="aboveLayer" width="100%" height="100%" >
+                <img id="underLayer" width="100%" height="100%" >
+                <button class="btn btn-primary" id="order-btn">NARUCI SADA</button>
+                    <nav class="navbar navbar-expand-lg " id="navbar">
+                            <a class="navbar-brand" href="#"><img src="Assets/logo.png" width="130px" id="logo"></a>
+                           <p id="intro-text">Your Happy Place</p>
+                          <!--NAV BAR ITEMS-->
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                              <ul class="navbar-nav mr-auto">
+                              </ul>
+                              <span class="nav-item">
+                                    <ul class="navbar-nav ml-auto">
+                                            <li class="nav-item ">
+                                              <a class="nav-link" href="#"><b>Lokacije</b> </a>
+                                            </li>
+                                            <li class="nav-item ">
+                                              <a class="nav-link" href="#"><b>Dostava</b> </a>
+                                            </li>
+                                            <li class="nav-item">
+                                              <a class="nav-link" href="#"><b>Kontakt</b></a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                            </li>
+                                          </ul>
+                              </span>
+                            </div>
+                          </nav>
+                          <!--/END OF NAVBAR-->
+
+                          <!--PIZZA CHOICE IMAGES-->
+                          <div class="container" id="pizza-thumbnail">
+                            <div class="row" id="pizza-pics-row">
+                                <img src="Assets/pizza1.jpg" width="150px"height="100px" id="pizzapic" class="img1">
+                                <img src="Assets/pizza2.jpg" width="150px"height="100px"id="pizzapic" class="img2">
+                                <img src="Assets/pizza3.jpg" width="150px"height="100px"id="pizzapic" class="img3">
+                            </div>
+                          </div>
+              </main>
+              <!--FIRST CONTAINER-->
+              <div class="container" id="firstContainer">
+                <div class="row" id="first-row">
+                  <div class="col-md-4" id="left-col" >
+                    <img src="Assets/NBG.png" width="400px" height="350px" id="nbg-pizza" >
+                    <br>
+                    <h1>011 222 55 66</h1>
+                  </div>
+                  <div class="col-md-4">
+                      <img src="Assets/Pizza-girl.png" width="420px" height="550px" id="pizza-girl">
+                  </div>
+                  <div class="col-md-4" id="right-col" >
+                      <img src="Assets/Vracar.png" width="400px" height="350px" id="vracar-pizza" >
+                      <br>
+                      <h1>011 222 44 33</h1>
+                  </div>
+                </div>
+              </div>
+              <!--SECOND CONTAINER-->
+             <div class="container" id="secondContainer">
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="Assets/box.png" width="520"height="380" id="pizza-box">
+                </div>
+                <div class="col-md-6">
+                  <h2>PAMETNA KUTIJA</h2>
+                  <h3 style="font-weight: bold">---</h3>
+                  <p id="box-description">Sve naše kutije su perforirane pa sa lakoćom možeš da podeliš poklopac na četiri dela i da ih koristiš kao podmetač.</p>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <p>Jeste li spremni da poručite?</p>
+                  <br>             
+                  <img src="Assets/box-uputstvo.png" width="550"height="90" id="box-uputstvo" style="opacity:0">
+                </div>
+              </div>
+             </div>
+             <!--THIRD CONTAINER-->
+             <div class="container" id="thirdContainer">
+                <h4>Za sta ste raspolozeni danas?</h4>
+                <p id="crtica">---</p>
+                <div class="row" id="food-row">
+                    <img src="Assets/Meat-Street_Jelovnik-1028x1200.png" width="250"height="270" id="imgFood1">
+                    <img src="Assets/Pasta_Jelovnik-1028x1200.png" width="250"height="270" id="imgFood2">
+                    <img src="Assets/Pizze_Jelovnik-1028x1200.png" width="250"height="270" id="imgFood3">
+                    <img src="Assets/Salate_Jelovnik-1028x1200.png" width="250"height="270" id="imgFood4">   
+              
+                  <img src="Assets/Dorucak_Jelovnik-1028x1200.png" width="250"height="270" id="imgFood5">
+                  <img src="Assets/Potazi-Supe_Jelovnik-1028x1200.png" width="250"height="270" id="imgFood6">
+                  <img src="Assets/Sendvic_Jelovnik-1028x1200.png" width="250"height="270" id="imgFood7">
+                  <img src="Assets/Dezerti_Jelovnik-1028x1200.png" width="250"height="270" id="imgFood8">   
+                  <button id="button1" class="btn btn-primary">&#10094;</button>
+                </div>
+                <input id="jelovnik-btn" type="button" width="150" height="80s" class="btn btn-outline-success" value="POGLEDAJ DETALJAN JELOVNIK">
+             </div>
+             <!--FORTH CONTAINER-->
+             <div class="container" id="fourthContainer">
+                 <iframe id="iframe" width="860" height="460" src="https://www.youtube.com/embed/VcIV099DyIk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+             <!--FIFTH CONTAINER-->
+            <div class="container" id="fifthContainer">
+              <h4>KOJI TIP PIZZE JE ZA TEBE?</h4>
+              <p id="crtica"><b>---</b></p>
+              <div class="row">
+                <div class="col-md-6">
+                  <img src="Assets/Italian-Style.png" id="italian-style" width="480"height="110" style="margin-bottom: 20px">
+                  <p class="tekst-pizze">Tanka taman kako i koliko treba, hrskava i ukusna, može biti u „klasičnoj“ ili crnoj varijansti (sa sipinim mastilom), idealna podloga za pažljivo probranu selekciju sastojaka i autentičan doživljaj omiljenog italijanskog specijalieta.
+                    </p>
+                  <br>
+                  <p style="font-size: 15px;line-height: 8px"><b>Originalna & Omiljena</b></p>
+                  <p style="font-size: 15px">Ona kojoj ćete se uvek vraćati.</p>
+                </div>
+                <div class="col-md-6">
+                  <img src="Assets/Chicago-Style.png" id="chicago-style"width="480"height="110"style="margin-bottom: 20px">
+                  <p class="tekst-pizze">
+                      Vazdušastog testa zlatno žutih nijansi, savršeno mekana i savršeno ispečena tako da se topi na nepcima daje potpuno novu dimenziju pizzama u svim kombinacijama. Drugačija od „klasičnih“, osvaja vas punoćom ukusa i neobičnom strukturom koja sa kvalitetnim sastojcima stvara simfoniju ukusa na nepcima i osvaja sva čula.</p>
+                  <br>
+                  <p style="font-size: 15px;line-height: 8px"><b>Raskošna & Različita</b></p>
+                  <p style="font-size: 15px">Osvaja na prvi zalogaj i prvi pogled.</p>
+                </div>
+              </div>
+            </div>
+            <!--SIXTH CONTAINER-->
+            <div class="container" id="sixthContainer">
+              <img src="Assets/No-Pets-02.png" id="pets"width="70%"height="70%"style="margin-left:15%;margin-top:40px;margin-bottom:40px">
+            </div>
+            <!--SEVENTH CONTAINER-->
+            <div class="container" id="seventhContainer">
+              <!--THUMBNAILS-->
+                <div class="row">
+                    <div class="column">
+                      <img src="Assets/rst1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow thumbnail" id="thumbnail1">
+                    </div>
+                    <div class="column">
+                      <img src="Assets/rst2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow thumbnail"id="thumbnail2">
+                    </div>
+                    <div class="column">
+                      <img src="Assets/rst3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow thumbnail"id="thumbnail3">
+                    </div>
+                    <div class="column">
+                      <img src="Assets/rst4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow thumbnail"id="thumbnail4">
+                    </div>
+                  </div>
+                  
+                  <!-- The MODAL-->
+                  <div id="myModal" class="modal">
+                    <span class="close cursor" onclick="closeModal()">&times;</span>
+                    <div class="modal-content">
+                  
+                      <div class="mySlides">
+                        <div class="numbertext">1 / 4</div>
+                        <img src="Assets/rst1.jpg" style="width:100%">
+                      </div>
+                  
+                      <div class="mySlides">
+                        <div class="numbertext">2 / 4</div>
+                        <img src="Assets/rst2.jpg" style="width:100%">
+                      </div>
+                  
+                      <div class="mySlides">
+                        <div class="numbertext">3 / 4</div>
+                        <img src="Assets/rst3.jpg" style="width:100%">
+                      </div>
+                  
+                      <div class="mySlides">
+                        <div class="numbertext">4 / 4</div>
+                        <img src="Assets/rst4.jpg" style="width:100%">
+                      </div>
+                  
+                      <!-- Next/previous controls -->
+                      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+            </div>
+            <!--FORE_FOOTER-->
+            <div  id="footer">
+              <div class="row">
+                <div class='col-md-6'>
+                  <div class="row">
+                      <div class="col-md-3 nbg" style="margin-left:100px; margin-top:60px;">
+                          <img src="Assets/NBG-logo-02_Futer.png" width="200"height="150">
+                          <p class="paragraph">  Bulevar 168v</p>
+                          <p class="paragraph">  8-24h</p>
+                          <p class="paragraph">  011 222 55 66</p>
+                        </div>
+                        <div class="col-md-3 vracar" style="margin-left:150px;margin-top:60px;">
+                          <img src="Assets/Vracar-logo_Futer.png" width="110"height="150">
+                          <p class="paragraph">Mutapova 5</p>
+                          <p class="paragraph">8-24h</p>
+                          <p class="paragraph">011 404 55 5</p>
+                        </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <p class="paragraph" style="margin-top:100px;margin-left:60px">U našim restoranima možete plaćati platnim karticama</p>
+                  <img src="Assets/Kartice-02_Futer.png" height="60"width="350" style="margin-left:60px;margin-top:20px">
+                </div>
+              </div>
+            </div>
+            <!--FOOTER-->
+            <footer>
+              <p class="paragraph" style="padding-top:15px">@2019 | Created by Nenad Panic</p>
+            </footer>
+            <!--GET BACK ON TOP BUTTON-->
+            <a href="#" class="btn btn-primary" id="get-up-btn" >UP</a>
+            <!--SCRIPT-->
+    <script src="Script/main.js"></script>
+</body>
+</html>
